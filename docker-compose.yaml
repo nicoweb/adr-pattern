@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  db:
+    restart: unless-stopped
+    image: postgres:12-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: adr
+      POSTGRES_USER: adr
+      POSTGRES_DB: adr
+      TZ: Europe/Paris
+      PGTZ: Europe/Paris
+    volumes:
+      - db-volume:/var/lib/postgresql/data
+      - ./var:/var/www/var
+
+volumes:
+  db-volume:
+    driver: local
