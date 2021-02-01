@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\Author;
+use App\Domain\Author;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
