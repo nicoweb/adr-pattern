@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Action\BlogPost;
 
-use App\Paginator\Paginator;
 use App\Repository\BlogPostRepository;
 use App\Responder\Responder;
 use App\Http\Response;
@@ -13,7 +12,6 @@ use Symfony\Component\HttpFoundation\Request;
 final class BlogPostListAction
 {
     public function __construct(
-        private Paginator $paginator,
         private BlogPostRepository $blogPostRepository,
         private Responder $responder,
     ) {}
